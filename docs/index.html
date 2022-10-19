@@ -1,0 +1,598 @@
+<html>
+
+<head>
+<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+<title>Konviva Tech Radar</title>
+<link rel="shortcut icon" href="">
+
+<script src="https://d3js.org/d3.v4.min.js"></script>
+<script src="radar.js"></script>
+
+<link rel="stylesheet" href="radar.css">
+</head>
+
+<body>
+
+<svg id="radar"></svg>
+
+<script>
+radar_visualization({
+  svg_id: "radar",
+  width: 1450,
+  height: 1000,
+  colors: {
+    background: "#fff",
+    grid: "#bbb",
+    inactive: "#ddd"
+  },
+  title: "Konviva Tech Radar — 2022",
+  quadrants: [
+    { name: "TECHNIQUES" },
+    { name: "TOOLS" },
+    { name: "LANGUAGES" },
+    { name: "FRAMEWORKS" },
+  ],
+  rings: [
+    { name: "ADOPT", color: "#fdba18" },
+    { name: "TRIAL", color: "#992587" },
+    { name: "ASSESS", color: "#065197" },
+    { name: "HOLD", color: "#363636" }
+  ],
+  print_layout: true,
+  // zoomed_quadrant: 0,
+  //ENTRIES
+  entries: [
+    //Languages
+     {
+        "quadrant": 2,
+        "ring": 0,
+        "label": "Java",
+        "active": true,
+        "moved": 0
+      },
+      {
+        "quadrant": 2,
+        "ring": 0,
+        "label": "JavaScript",
+        "active": true,
+        "moved": 0
+      },
+     {
+        "quadrant": 2,
+        "ring": 0,
+        "label": "CSS 3",
+        "active": true,
+        "moved": 0
+      },
+     {
+        "quadrant": 2,
+        "ring": 0,
+        "label": "PL-SQL",
+        "active": true,
+        "moved": 0
+      },
+      {
+        "quadrant": 2,
+        "ring": 0,
+        "label": "HTML",
+        "active": true,
+        "moved": 0
+      },
+      {
+        "quadrant": 2,
+        "ring": 1,
+        "label": "TypeScript",
+        "active": true,
+        "moved": 0
+      },
+     {
+        "quadrant": 2,
+        "ring": 1,
+        "label": "MQL",
+        "active": true,
+        "moved": 0
+      },
+    
+    //Frameworks
+    {
+        "quadrant": 3,
+        "ring": 3,
+        "label": "IONIC",
+        "active": true,
+        "moved": -1
+      },
+      {
+        "quadrant": 3,
+        "ring": 3,
+        "label": "AngularJS v1",
+        "active": true,
+        "moved": -1
+      },
+      {
+        "quadrant": 3,
+        "ring": 0,
+        "label": "NodeJS",
+        "active": true,
+        "moved": 0
+      },
+     {
+        "quadrant": 3,
+        "ring": 1,
+        "label": "AngularJS v5",
+        "active": true,
+        "moved": 1
+      },
+     {
+        "quadrant": 3,
+        "ring": 0,
+        "label": "SpringBoot ORM",
+        "active": true,
+        "moved": 0
+      },
+      {
+        "quadrant": 3,
+        "ring": 0,
+        "label": "Bootstrap",
+        "active": true,
+        "moved": 0
+      },
+      {
+        "quadrant": 3,
+        "ring": 1,
+        "label": "React",
+        "active": true,
+        "moved": 0
+      },
+      {
+        "quadrant": 3,
+        "ring": 1,
+        "label": "React Native",
+        "active": true,
+        "moved": 0
+      },
+      {
+        "quadrant": 3,
+        "ring": 1,
+        "label": "Material UI",
+        "active": true,
+        "moved": 0
+      },
+     {
+        "quadrant": 3,
+        "ring": 1,
+        "label": "Tailwind CSS",
+        "active": true,
+        "moved": 0
+      },
+      {
+        "quadrant": 3,
+        "ring": 1,
+        "label": "i18next",
+        "active": true,
+        "moved": 0
+      },
+      {
+        "quadrant": 3,
+        "ring": 1,
+        "label": "SASS",
+        "active": true,
+        "moved": 0
+      },
+    
+      {
+        "quadrant": 3,
+        "ring": 0,
+        "label": "Swagger",
+        "active": true,
+        "moved": 0
+      },
+     {
+        "quadrant": 3,
+        "ring": 2,
+        "label": "LESS",
+        "active": true,
+        "moved": 0
+      },
+    
+    //3. Tools
+    {
+        "quadrant": 1,
+        "ring": 0,
+        "label": "KM Script",
+        "active": true,
+        "moved": 0
+    },
+     {
+        "quadrant": 1,
+        "ring": 0,
+        "label": "Firebase",
+        "active": true,
+        "moved": 0
+    },
+   {
+        "quadrant": 1,
+        "ring": 0,
+        "label": "Figma",
+        "active": true,
+        "moved": 0
+      },
+    {
+        "quadrant": 1,
+        "ring": 0,
+        "label": "Jenkins",
+        "active": true,
+        "moved": 0
+      },
+      {
+        "quadrant": 1,
+        "ring": 0,
+        "label": "Sellenium",
+        "active": true,
+        "moved": 0
+     },
+     {
+        "quadrant": 1,
+        "ring": 0,
+        "label": "Jira",
+        "active": true,
+        "moved": 0
+      },
+     {
+        "quadrant": 1,
+        "ring": 0,
+        "label": "Apache Storm",
+        "active": true,
+        "moved": 0
+      },
+     {
+        "quadrant": 1,
+        "ring": 2,
+        "label": "Microsoft AppCenter",
+        "active": true,
+        "moved": 0
+      },
+      {
+        "quadrant": 1,
+        "ring": 1,
+        "label": "Azure DevOps",
+        "active": true,
+        "moved": 0
+      },
+     {
+        "quadrant": 1,
+        "ring": 0,
+        "label": "MariaDB",
+        "active": true,
+        "moved": 0
+      },
+     {
+        "quadrant": 1,
+        "ring": 0,
+        "label": "GitLab",
+        "active": true,
+        "moved": 0
+      },
+     {
+        "quadrant": 1,
+        "ring": 0,
+        "label": "Apache Cordova",
+        "active": true,
+        "moved": 0
+      },
+      {
+        "quadrant": 1,
+        "ring": 0,
+        "label": "Cucumber",
+        "active": true,
+        "moved": 0
+      },
+      {
+        "quadrant": 1,
+        "ring": 1,
+        "label": "MongoDB",
+        "active": true,
+        "moved": 0
+      },
+      {
+        "quadrant": 1,
+        "ring": 1,
+        "label": "PostgreSQL",
+        "active": true,
+        "moved": 0
+      },
+      {
+        "quadrant": 1,
+        "ring": 1,
+        "label": "EqualWeb",
+        "active": true,
+        "moved": 0
+      },
+      {
+        "quadrant": 1,
+        "ring": 2,
+        "label": "ReadMe",
+        "link": " https://readme.com/",
+        "active": true,
+        "moved": 0
+      },
+
+      {
+        "quadrant": 1,
+        "ring": 1,
+        "label": "GrayLog",
+        "active": true,
+        "moved": 0
+      },
+     {
+        "quadrant": 1,
+        "ring": 2,
+        "label": "Hasura.io",
+        "active": true,
+        "moved": 0
+      },
+     {
+        "quadrant": 1,
+        "ring": 1,
+        "label": "QAlity",
+        "active": true,
+        "moved": 0
+     },
+    {
+        "quadrant": 1,
+        "ring": 2,
+        "label": "Algolia",
+        "active": true,
+        "moved": 0
+      },
+      {
+        "quadrant": 1,
+        "ring": 2,
+        "label": "Apollo GraphQL",
+        "active": true,
+        "moved": 0
+      },
+
+      {
+        "quadrant": 1,
+        "ring": 2,
+        "label": "Sentry",
+        "link": " https://sentry.io/",
+        "active": true,
+        "moved": 0
+      },
+      {
+        "quadrant": 1,
+        "ring": 2,
+        "label": "BrowseStack",
+        "active": true,
+        "moved": 0
+      },
+      {
+        "quadrant": 1,
+        "ring": 2,
+        "label": "Google TagManager",
+        "active": true,
+        "moved": 0
+      },
+      {
+        "quadrant": 1,
+        "ring": 1,
+        "label": "Keda",
+        "link": " https://keda.sh/",
+        "active": true,
+        "moved": 0
+      },
+      {
+        "quadrant": 1,
+        "ring": 2,
+        "label": "SonarQube",
+        "active": true,
+        "moved": 0
+      },
+      {
+        "quadrant": 1,
+        "ring": 2,
+        "label": "Apache JMeter",
+        "active": true,
+        "moved": 0
+      },
+      {
+        "quadrant": 1,
+        "ring": 2,
+        "label": "Unleashed.io",
+        "link":"https://unleashed.io",
+        "active": true,
+        "moved": 0
+      },
+      {
+        "quadrant": 1,
+        "ring": 2,
+        "label": "OWASP",
+        "active": true,
+        "moved": 0
+      },
+      {
+        "quadrant": 1,
+        "ring": 0,
+        "label": "RabbitMQ",
+        "active": true,
+        "moved": 0
+      },
+      {
+        "quadrant": 1,
+        "ring": 2,
+        "label": "Apache AirFlow",
+        "active": true,
+        "moved": 0
+      },
+      {
+        "quadrant": 1,
+        "ring": 2,
+        "label": "ElasticSearch",
+        "active": true,
+        "moved": 0
+      },
+    //TECHQUINIES
+    {
+        "quadrant": 0,
+        "ring": 0,
+        "label": "Git",
+        "active": true,
+        "moved": 0
+      },     
+     {
+        "quadrant": 0,
+        "ring": 0,
+        "label": "API REST",
+        "active": true,
+        "moved": 0
+      },  
+     {
+        "quadrant": 0,
+        "ring": 0,
+        "label": "SCORM",
+        "active": true,
+        "moved": 0
+      },  
+      {
+        "quadrant": 0,
+        "ring": 2,
+        "label": "X-Api",
+        "active": true,
+        "moved": 0
+      },  
+      {
+        "quadrant": 0,
+        "ring": 1,
+        "label": "Agile methodology",
+        "active": true,
+        "moved": 0
+      },  
+      {
+        "quadrant": 0,
+        "ring": 0,
+        "label": "Containers",
+        "active": true,
+        "moved": 0
+      },  
+      {
+        "quadrant": 0,
+        "ring": 0,
+        "label": "Gherkin Syntax",
+        "active": true,
+        "moved": 0
+      },  
+      {
+        "quadrant": 0,
+        "ring": 2,
+        "label": "GraphQL",
+        "active": true,
+        "moved": 0
+      },
+      {
+        "quadrant": 0,
+        "ring": 2,
+        "label": "BFF Pattern",
+        "active": true,
+        "moved": 0
+      },
+     {
+        "quadrant": 0,
+        "ring": 2,
+        "label": "Semantic Version",
+        "active": true,
+        "moved": 0
+      },
+     {
+        "quadrant": 0,
+        "ring": 2,
+        "label": "TDD",
+        "active": true,
+        "moved": 0
+      },
+      {
+        "quadrant": 0,
+        "ring": 2,
+        "label": "CI/CD",
+        "active": true,
+        "moved": 0
+      },
+     {
+        "quadrant": 0,
+        "ring": 2,
+        "label": "BDD",
+        "active": true,
+        "moved": 0
+      },
+     {
+        "quadrant": 0,
+        "ring": 2,
+        "label": "DDD",
+        "active": true,
+        "moved": 0
+      },
+      {
+        "quadrant": 0,
+        "ring": 2,
+        "label": "GitFlow",
+        "active": true,
+        "moved": 0
+      },
+      {
+        "quadrant": 0,
+        "ring": 1,
+        "label": "Micro Front-end",
+        "active": true,
+        "moved": 0
+      },
+      {
+        "quadrant": 0,
+        "ring": 2,
+        "label": "FeatureFlag",
+        "active": true,
+        "moved": 0
+      },
+      {
+        "quadrant": 0,
+        "ring": 2,
+        "label": " Canary Release",
+        "active": true,
+        "moved": 0
+      },
+      {
+        "quadrant": 0,
+        "ring": 2,
+        "label": "A/B Test",
+        "active": true,
+        "moved": 0
+      },
+      {
+        "quadrant": 0,
+        "ring": 2,
+        "label": "Blue-Green Deployment",
+        "active": true,
+        "moved": 0
+      }
+    ]
+});
+</script>
+
+<table>
+<tr>
+  
+<td>
+<p>
+  The Konviva Tech Radar is a list of technologies, complemented by an assessment result, called ring assignment. We use four rings with the following semantics:
+</p>
+<ul>
+<li><strong>ADOPT</strong> &mdash; Technologies we have high confidence in to serve our purpose, also in large scale. Technologies with a usage culture in our Laura production environment, low risk and recommended to be widely used.</li>
+<li><strong>TRIAL</strong> &mdash; Technologies that we have seen work with success in project work to solve a real problem; first serious usage experience that confirm benefits and can uncover limitations. TRIAL technologies are slightly more risky; some engineers in our organization walked this path and will share knowledge and experiences.</li>
+<li><strong>ASSESS</strong> &mdash; Technologies that are promising and have clear potential value-add for us; technologies worth to invest some research and prototyping efforts in to see if it has impact. ASSESS technologies have higher risks; they are often brand new and highly unproven in our organisation. You will find some engineers that have knowledge in the technology and promote it, you may even find teams that have started a prototyping effort.</li>
+<li><strong>HOLD</strong> &mdash; Technologies not recommended to be used for new projects. Technologies that we think are not (yet) worth to (further) invest in. HOLD technologies should not be used for new projects, but usually can be continued for existing projects.</li>
+</ul>
+</td>
+</tr>
+</table>
+
+</body>
+</html>
